@@ -1,0 +1,21 @@
+❌ ADSBdb API 404: c00e25 not found.
+❌ ADSBdb API 404: aa9de7 not found.
+❌ ADSBdb API 404: a5124c not found.
+Traceback (most recent call last):
+  File "/home/kmare/tracker2.0/alert17.py", line 749, in <module>
+    asyncio.run(main_loop())
+  File "/usr/lib/python3.11/asyncio/runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/asyncio/base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "/home/kmare/tracker2.0/alert17.py", line 708, in main_loop
+    "flight_progress": 100 - (fa_info.get("distance_remaining_nm", 0) / max((fa_info.get("distance_elapsed_nm", 1) + fa_info.get("distance_remaining_nm", 0)), 1)) * 100 if fa_info.get("distance_remaining_nm") and fa_info.get("distance_elapsed_nm") else 0,
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: '>' not supported between instances of 'int' and 'str'
+
+Exiting...
